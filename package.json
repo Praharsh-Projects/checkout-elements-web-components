@@ -1,0 +1,58 @@
+{
+  "name": "checkout-elements-web-components",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Accessible React and Web Components workbench for reusable checkout UI, testing, documentation, and CI.",
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -p tsconfig.json && vite build",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "storybook": "storybook dev -p 6006",
+    "build:storybook": "storybook build",
+    "preview": "vite preview --host 0.0.0.0",
+    "quality": "npm run lint && npm run typecheck && npm run test:coverage && npm run build && npm run build:storybook && npm audit --audit-level=high"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "2.12.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "9.3.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.0",
+    "@storybook/addon-a11y": "10.5.4",
+    "@storybook/react-vite": "10.5.4",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "24.13.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitest/coverage-v8": "4.1.10",
+    "axe-core": "^4.10.3",
+    "eslint": "10.8.0",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "eslint-plugin-react-refresh": "0.5.3",
+    "globals": "17.7.0",
+    "jsdom": "^26.1.0",
+    "postcss": "8.5.23",
+    "storybook": "10.5.4",
+    "typescript-eslint": "8.65.0",
+    "vitest": "4.1.10"
+  }
+}
