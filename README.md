@@ -55,6 +55,8 @@ The workbench uses two state-management levels deliberately. Redux Toolkit
 coordinates preview preferences shared by the React and Web Component surfaces.
 Each embedded checkout instance keeps its request and quote in a local reducer,
 so independent host instances are not coupled through a global store.
+The rationale and rejected alternatives are recorded in
+[`docs/decisions/0001-state-and-monitoring-boundaries.md`](docs/decisions/0001-state-and-monitoring-boundaries.md).
 
 ## Run locally
 
@@ -88,7 +90,7 @@ desktop/mobile Playwright regression on pushes and pull requests.
 
 Latest verified local snapshot:
 
-- 16 Vitest checks passed across 7 files.
+- 17 Vitest checks passed across 7 files.
 - Coverage reached 95.90% statements, 90.78% branches, 95.34% functions, and
   95.76% lines.
 - Production and static Storybook builds completed.
