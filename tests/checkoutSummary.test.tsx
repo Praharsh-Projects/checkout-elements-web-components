@@ -62,6 +62,27 @@ describe("CheckoutSummary", () => {
     );
   });
 
+  it("reports an aborted outcome when the component unmounts during loading", async () => {
+    const onMetric = vi.fn();
+    const { unmount } = render(
+      <CheckoutSummary
+        onMetric={onMetric}
+        session={mockCheckoutSession}
+      />
+    );
+
+    unmount();
+
+    await waitFor(() => {
+      expect(onMetric).toHaveBeenCalledWith(
+        expect.objectContaining({
+          name: "checkout.quote",
+          outcome: "aborted"
+        })
+      );
+    });
+  });
+
   it("has no obvious accessibility violations for the rendered checkout summary", async () => {
     const { container } = render(<CheckoutSummary session={mockCheckoutSession} />);
 

@@ -12,7 +12,7 @@ npm run test:e2e
 Latest local result:
 
 - ESLint and strict TypeScript: passed.
-- Vitest: 16 checks across 7 files passed.
+- Vitest: 17 checks across 7 files passed.
 - Coverage: 95.90% statements, 90.78% branches, 95.34% functions, 95.76% lines.
 - Vite production build: passed.
 - Static Storybook build with accessibility addon: passed.
